@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Platform} from 'react-native';
 
 
 export default styles = StyleSheet.create({
@@ -6,7 +6,8 @@ export default styles = StyleSheet.create({
         backgroundColor: '#2a2a2a',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        height: 60
+        height: 60,
+        marginTop: (Platform.OS === 'ios') ? 20 : 0,
     },
     container__left_panel: {
         flexDirection: 'row'
@@ -26,7 +27,6 @@ export default styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: '400',
         fontStyle: 'normal',
-        fontFamily: 'Proxima Nova Cn Rg',
         letterSpacing: 1.2,
         textAlign: 'left',
         color: '#ffffff'

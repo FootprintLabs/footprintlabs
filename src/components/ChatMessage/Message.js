@@ -53,8 +53,7 @@ export default class Message extends Component {
 					<Text 
 						style={{
 							color: '#3e3e3e',
-							fontWeight: '400', fontSize: 15,
-							fontFamily: 'Proxima Nova Cn Rg',}}>
+							fontWeight: '400', fontSize: 15,}}>
 						{text}
 					</Text>
 				</View>
@@ -70,16 +69,14 @@ export default class Message extends Component {
 					<Text 
 						style={{
 							color: 'rgb(0, 127, 224)',
-							fontWeight: '400', fontSize: 15,
-							fontFamily: 'Proxima Nova Cn Rg',}}>
+							fontWeight: '400', fontSize: 15}}>
 						{replies.length.toString()}
 					</Text>
 					<Text 
 						style={{
 							color: '#999',
 							fontWeight: '400', fontSize: 15,
-							paddingLeft: 4,
-							fontFamily: 'Proxima Nova Cn Rg',}}>
+							paddingLeft: 4}}>
 						replies from {replies.join(', ')}
 					</Text>
 				</View>

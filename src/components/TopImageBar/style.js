@@ -29,7 +29,8 @@ export default styles = StyleSheet.create({
     paddingTop: 115,
     paddingLeft: 15,
     paddingRight: 15,
-    zIndex: 3
+    zIndex: 3,
+    backgroundColor: 'rgba(0,0,0,0)',
   },
 
   container__panel___textMain: {

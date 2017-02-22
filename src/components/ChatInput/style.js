@@ -1,4 +1,4 @@
-import {StyleSheet, Dimensions} from 'react-native';
+import {StyleSheet, Dimensions, Platform} from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
@@ -7,7 +7,19 @@ const styles = StyleSheet.create({
         width: Dimensions.get("window").width,
         backgroundColor: '#e0e0e0',
         position: 'absolute',
-        bottom: 0,      
+        top: (Platform.OS === 'ios')
+            ? Dimensions.get("window").height - 325
+            : Dimensions.get("window").height - 305,      
+        flex: 1,
+        flexDirection: 'row',
+    },
+    container_keyboard: {
+        height: 65,
+        padding: 15,
+        width: Dimensions.get("window").width,
+        backgroundColor: '#e0e0e0',
+        position: 'absolute',
+        top: Dimensions.get("window").height - 305 - (Dimensions.get("window").width*2/3),      
         flex: 1,
         flexDirection: 'row',
     },
@@ -15,7 +27,7 @@ const styles = StyleSheet.create({
 
     container__submit: {
         backgroundColor: '#fff',
-        width: 35, height: 35
+        width: 35, height: 35,
     },
     container__submit__img: {
         flex:1,
@@ -28,8 +40,10 @@ const styles = StyleSheet.create({
     container__input: {
         backgroundColor: '#fff',
         paddingLeft: 10,
-        
-        width: Dimensions.get("window").width - 65
+        zIndex: 22,
+        height: 35,
+        maxWidth: Dimensions.get("window").width - 65,
+        minWidth: Dimensions.get("window").width - 65
     },
     container__input__attach: {
         position: 'absolute',
