@@ -8,16 +8,16 @@ import {
   Image 
 } from 'react-native';
 
-import styles from './board.style';
-import Message from './message';
+import styles from './style';
+import ChatMessage from '../ChatMessage';
 
 
- const Board = ({messages}) => { 
+ const Feed = ({messages}) => { 
     return (
         <ScrollView style={styles.container}>
-            {messages.map((item, i) => <Message key={i+''+(Math.floor(Math.random()*10000))}>{item}</Message>)}
+            {messages.map((item, i) => <ChatMessage key={i+''+(Math.floor(Math.random()*10000))}>{item}</ChatMessage>)}
         </ScrollView>
     );
 }
 
-export default Board;
+export default Feed;

@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import {View, Image, Text} from 'react-native';
 import SvgUri from 'react-native-svg-uri';
 
-import styles from './message.style';
-import {reply} from '../assets/images/icons/reply';
+import styles from './style';
+import Images from '../../images';
 
 
 export default class Message extends Component {
@@ -11,9 +11,10 @@ export default class Message extends Component {
 		const {avatar, username, time, text, replies, isReply} = this.props.children;
 		const containerStyle = isReply
 			? styles.containerReply
-			: styles.container;
-
-        return (
+			: styles.container;      
+		
+		
+		return (
             <View style={containerStyle}>
 				<View style={styles.container__panel}>
 					<View style={{flex:1, flexDirection: 'row'}}>
@@ -40,7 +41,7 @@ export default class Message extends Component {
 							<SvgUri
 								width="18"
 								height="17"
-								svgXmlData ={reply}
+								svgXmlData ={Images.svg.reply}
 								style={{
 								}}
 							/>
@@ -62,7 +63,7 @@ export default class Message extends Component {
 					<SvgUri
 						width="18"
 						height="17"
-						svgXmlData ={reply}
+						svgXmlData ={Images.svg.reply}
 						style={{
 						}}
 					/>

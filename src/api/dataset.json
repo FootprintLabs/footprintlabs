@@ -1,0 +1,46 @@
+{
+    "user": {
+        "id": 1,
+        "avatar": {
+            "local": "avatarUser1"
+        },
+        "username": "Marion Diaz"
+    },
+    "chat": {
+        "messages": [
+            {
+                "id": 1,
+                "isReply": false,
+                "avatar": {
+                    "local": "avatarUser1"
+                },
+                "username": "Marion Diaz",
+                "time": "1d",
+                "text": "Snowboarding is a sport or hobby that people usually do.",
+                "replies": ["Danny Fortune"]
+            }, 
+            {
+                "id": 2,
+                "isReply": true,
+                "avatar": {
+                    "local": "avatarUser2"
+                },
+                "username": "Danny Fortune",
+                "time": "1h",
+                "text": "I've been doing CroffFit for less than a year.",
+                "replies": []
+            }, 
+            {
+                "id": 3,
+                "isReply": false,
+                "avatar": {
+                    "local": "avatarUser3"
+                },
+                "username": "Christina Haynes",
+                "time": "1m",
+                "text": "I fell in love with CrossFit... Because it made me challenge myself to what I didn't think I could do.",
+                "replies": []
+            }
+        ]
+    }
+}

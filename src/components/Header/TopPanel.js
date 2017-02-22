@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import SvgUri from 'react-native-svg-uri';
 import {Text, View} from 'react-native';
 
-import {logo} from '../assets/images/icons/logo';
-import styles from './top_panel.style';
+import styles from './style';
+import Images from '../../images';
 
 export default class TopPanel extends Component {
     
@@ -15,7 +15,7 @@ export default class TopPanel extends Component {
                         <SvgUri
                             width="22"
                             height="22"
-                            svgXmlData ={logo}
+                            svgXmlData ={Images.svg.logo}
                         />
                     </View>
                     

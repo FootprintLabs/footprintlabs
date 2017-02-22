@@ -2,18 +2,17 @@ import React, {Component} from 'react'
 import {Text, View, Button, Image} from 'react-native';
 
 import SvgUri from 'react-native-svg-uri';
-import TopPanel from './top_panel';
-import {lock} from '../assets/images/icons/lock';
-import styles from './header.style';
+import styles from './style';
 
-export default class Header extends Component {
+import Images from '../../images';
+
+
+export default class ImageBar extends Component {
     render () {
         return (
             <View style={styles.container}>
-                <TopPanel />
-
                 <Image
-                    source={require('../assets/images/cover-hq.jpg')}
+                    source={Images.headerImg}
                     style={styles.container__bgimg}
                 />
                 <View style={styles.container__box} />
@@ -27,7 +26,7 @@ export default class Header extends Component {
                             <SvgUri
                                 width="10"
                                 height="12"
-                                svgXmlData ={lock}
+                                svgXmlData ={Images.svg.lock}
                             />
                             <Text style={styles.container__panel___textSub}>
                                 Channel • 10,000 Members

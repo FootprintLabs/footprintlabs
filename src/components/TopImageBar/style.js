@@ -3,21 +3,21 @@ import {StyleSheet,Dimensions} from 'react-native';
 
 export default styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#F5FCFF',
+    height: 180
   },
   container__bgimg: {
     flex:1,
     alignSelf: 'stretch',
     width: Dimensions.get("window").width, 
-    height: 180, top:60, 
+    height: 180, top:0, 
     position: 'absolute'
   },
   container__box: {
     flex:1,
     alignSelf: 'stretch',
     width: Dimensions.get("window").width, 
-    height: 180, top:60, 
+    height: 180, top:0, 
     position: 'absolute',
     zIndex: 2,
     backgroundColor: 'rgba(0,0,0,.6)'

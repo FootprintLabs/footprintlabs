@@ -1,18 +1,19 @@
 import React, {Component} from 'react';
-import {View} from 'react-native';
+import {View, Text} from 'react-native';
 
-import MessageInput from './message_input';
-import Board from './board';
-import styles from './chat.style';
-import dataset from '../dataset';
+import ChatInput from '../ChatInput';
+import ChatFeed from '../ChatFeed';
+import styles from './style';
+import ChatApi from '../../api/ChatApi';
+import UserApi from '../../api/UserApi';
 
 
-export default class Chat extends Component {
+export default class ChatContainer extends Component {
     constructor(props) {
         super(props);
         this.state ={
-            messages: dataset.chat.messages,
-            user: dataset.user
+            messages: ChatApi.getMessages(),
+            user: UserApi.getUserData()
         }
 
         this.addMessage = this.addMessage.bind(this);
@@ -41,8 +42,8 @@ export default class Chat extends Component {
 
         return (
             <View style={styles.container}>
-                <Board messages={messages}/>
-                <MessageInput addMessage={this.addMessage} user={user}/>
+                <ChatFeed messages={messages}/>
+                <ChatInput addMessage={this.addMessage} user={user}/>
             </View>
         )
     }
