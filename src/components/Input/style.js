@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
         width: Dimensions.get("window").width,
         backgroundColor: '#e0e0e0',
         position: 'absolute',
-        top: Dimensions.get("window").height - 305 - (Dimensions.get("window").width*2/3),      
+        top: Dimensions.get("window").height - 290 - (Dimensions.get("window").width*2/3),      
         flex: 1,
         flexDirection: 'row',
     },

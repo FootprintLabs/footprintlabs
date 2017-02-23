@@ -70,6 +70,7 @@ export default class MessageInput extends Component {
                                 style={{height: 40}}
                                 onFocus={this.toggleKeyboard}
                                 onEndEditing={this.toggleKeyboard}
+                                autoCorrect={false}
                             /> 
                         
                         <View style={styles.container__input__emoji}>
