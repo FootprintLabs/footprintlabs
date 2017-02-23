@@ -1,36 +1,35 @@
 {
     "user": {
-        "id": "1"
+        "id": 1
     },
     "users": [
         {
-            "id": "0",
+            "id": 0,
             "avatar": "avatarUser1",
             "username": "Marion Diaz"
         },
         {
-            "id": "1",
+            "id": 1,
             "avatar": "avatarUser2",
             "username": "Danny Fortune"
         },
         {
-            "id": "2",
+            "id": 2,
             "avatar": "avatarUser3",
             "username": "Christina Haynes"
         }
-        
     ],
     "chat": {
         "messages": [
             {
-                "id": "0",
+                "id": 0,
                 "create_at": 0,
                 "update_at": 0,
                 "delete_at": 0,
                 "user_id": "0",
                 "channel_id": "1",
                 "root_id": "1",
-                "parent_id": "",
+                "parent_id": "3",
                 "original_id": "1",
                 "message": "Snowboarding is a sport or hobby that people usually do.",
                 "type": "message",
@@ -38,15 +37,21 @@
                 "hashtag": "#1",
                 "filenames": [],
                 "pending_post_id": ""
+                // "isReply": false,
+                // "avatar": "avatarUser1",
+                // "username": "Marion Diaz",
+                // "time": "1d",
+                // "text": "",
+                // "replies": ["Danny Fortune"]
             }, {
-                "id": "1",
+                "id": 1,
                 "create_at": 0,
                 "update_at": 0,
                 "delete_at": 0,
                 "user_id": "1",
                 "channel_id": "1",
                 "root_id": "1",
-                "parent_id": "0",
+                "parent_id": "3",
                 "original_id": "1",
                 "message": "I've been doing CroffFit for less than a year.",
                 "type": "message",
@@ -54,15 +59,21 @@
                 "hashtag": "#1",
                 "filenames": [],
                 "pending_post_id": ""
+                // "isReply": false,
+                // "avatar": "avatarUser1",
+                // "username": "Marion Diaz",
+                // "time": "1d",
+                // "text": "",
+                // "replies": ["Danny Fortune"]
             }, {
-                "id": "2",
+                "id": 2,
                 "create_at": 0,
                 "update_at": 0,
                 "delete_at": 0,
                 "user_id": "2",
                 "channel_id": "1",
                 "root_id": "1",
-                "parent_id": "",
+                "parent_id": "3",
                 "original_id": "1",
                 "message": "I fell in love with CrossFit... Because it made me challenge myself to what I didn't think I could do.",
                 "type": "message",
@@ -70,22 +81,12 @@
                 "hashtag": "#1",
                 "filenames": [],
                 "pending_post_id": ""
-            }, {
-                "id": "2",
-                "create_at": 0,
-                "update_at": 0,
-                "delete_at": 0,
-                "user_id": "1",
-                "channel_id": "1",
-                "root_id": "1",
-                "parent_id": "",
-                "original_id": "1",
-                "message": "CrossFit is really cool...",
-                "type": "message",
-                "props": {},
-                "hashtag": "#1",
-                "filenames": [],
-                "pending_post_id": ""
+                // "isReply": false,
+                // "avatar": "avatarUser1",
+                // "username": "Marion Diaz",
+                // "time": "1d",
+                // "text": "",
+                // "replies": ["Danny Fortune"]
             }
         ]
     }

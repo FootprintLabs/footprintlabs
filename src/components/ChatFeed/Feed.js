@@ -1,23 +1,44 @@
 import React, {Component} from 'react';
-import {ScrollView} from 'react-native';
+import {ScrollView, View} from 'react-native';
 
 import styles from './style';
 import ChatMessage from '../ChatMessage';
+import ChatReplies from '../ChatReplies';
 
 
 export default class Feed extends Component { 
     constructor(props) {
         super(props);
+
+        this.state = {
+            shouldScrollDown: true, 
+            messages: props.messages
+        }
+
+        this.toggleRepliesVisibility = this.toggleRepliesVisibility.bind(this);
     }
 
     componentDidUpdate(){
-        const bottomOfList =  this.state.listHeight - this.state.scrollViewHeight
-        this._scrollView.scrollTo({ y: bottomOfList })   
+        if(this.state.shouldScrollDown){
+            const bottomOfList =  this.state.listHeight - this.state.scrollViewHeight
+            this._scrollView.scrollTo({ y: bottomOfList }) 
+        }  
     }
     
-    render() {
-        const {messages} = this.props;
 
+    toggleRepliesVisibility(id) {
+        this.state.shouldScrollDown = false;
+        const messages = this.state.messages.slice().map(message => {
+            if(id === message.id)
+                message.visibility = !message.visibility;
+            return message; 
+        });
+
+        this.setState({messages});
+    }
+
+    render() {
+        const {messages} = this.state;
 
         return (
             <ScrollView 
@@ -31,7 +52,22 @@ export default class Feed extends Component {
                 }}
                 style={styles.container}
             >
-                {messages.map((item, i) => <ChatMessage key={i+''+(Math.floor(Math.random()*10000))}>{item}</ChatMessage>)}
+                {messages.map((item, i) => {
+                    return <View key={i+''+(Math.floor(Math.random()*10000))}>
+                        <ChatMessage 
+                            key={i+''+(Math.floor(Math.random()*10000))}
+                            toggleReplies={()=>{this.toggleRepliesVisibility(item.id)}}
+                        >
+                            {item.current}
+                        </ChatMessage>
+                        {
+                            <ChatReplies 
+                                replies={item.replies}
+                                visibility={item.visibility}
+                            />
+                        }
+                    </View>
+                })}
             </ScrollView>
         );
     }

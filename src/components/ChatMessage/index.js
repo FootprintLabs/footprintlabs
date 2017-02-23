@@ -6,7 +6,7 @@ import Message from './Message';
 export default class ChatMessage extends Component {
     render() {
         return (
-            <Message>{this.props.children}</Message>
+            <Message toggleReplies={this.props.toggleReplies}>{this.props.children}</Message>
         );
     }
 }

@@ -1,15 +1,15 @@
-import {logo} from './assets/images/icons/logo';
-import {lock} from './assets/images/icons/lock';
-import {reply} from './assets/images/icons/reply';
-import {emoji} from './assets/images/icons/emoji';
-import {attach} from './assets/images/icons/attach';
+import {logo} from '../public/images/icons/logo';
+import {lock} from '../public/images/icons/lock';
+import {reply} from '../public/images/icons/reply';
+import {emoji} from '../public/images/icons/emoji';
+import {attach} from '../public/images/icons/attach';
 
 
 export default Images = {
     avatars: {
-        avatarUser1: require("./assets/images/user-avatars/user-photo-1.png"),
-        avatarUser2: require("./assets/images/user-avatars/user-photo-2.png"),
-        avatarUser3: require("./assets/images/user-avatars/user-photo-3.png"),
+        avatarUser1: require("../public/images/user-avatars/user-photo-1.png"),
+        avatarUser2: require("../public/images/user-avatars/user-photo-2.png"),
+        avatarUser3: require("../public/images/user-avatars/user-photo-3.png"),
     },
     svg: {
         logo, 
@@ -19,7 +19,7 @@ export default Images = {
         attach
     },
     Btns: {
-        chatInput: require('./assets/images/text-logo.png'),
+        chatInput: require('../public/images/text-logo.png'),
     },
-    headerImg: require('./assets/images/cover-hq.jpg'),
+    headerImg: require('../public/images/cover-hq.jpg'),
 }
