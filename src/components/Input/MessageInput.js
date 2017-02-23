@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import SvgUri from 'react-native-svg-uri';
-import {Platform, Text, DeviceEventEmitter, Dimensions, ScrollView, KeyboardAvoidingView, View, TextInput, Image, TouchableWithoutFeedback} from 'react-native';
+import {Platform, Text, Dimensions, View, TextInput, Image, TouchableWithoutFeedback} from 'react-native';
 
 import Images from '../../images';
+import Icon from '../Icon';
 import styles from './style';
 
 
@@ -73,19 +73,11 @@ export default class MessageInput extends Component {
                             /> 
                         
                         <View style={styles.container__input__emoji}>
-                            <SvgUri
-                                width="17"
-                                height="17"
-                                svgXmlData ={Images.svg.emoji}
-                            />   
+                            <Icon size="medium" type="emoji" />
                         </View> 
 
                         <View style={styles.container__input__attach}>
-                            <SvgUri
-                                width="18"
-                                height="17"
-                                svgXmlData ={Images.svg.attach}
-                            />
+                            <Icon size="medium" type="attach" />
                         </View> 
                     </View>  
                 </View>  

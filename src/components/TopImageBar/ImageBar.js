@@ -1,10 +1,12 @@
 import React, {Component} from 'react'
 import {Text, View, Button, Image} from 'react-native';
 
-import SvgUri from 'react-native-svg-uri';
 import styles from './style';
 
 import Images from '../../images';
+import Icon from '../Icon';
+import MenuBtn from '../MenuBtn';
+import GenericBtn from '../GenericBtn'
 
 
 export default class ImageBar extends Component {
@@ -23,29 +25,17 @@ export default class ImageBar extends Component {
                             Staff
                         </Text>
                         <View style={{flexDirection:'row', alignItems: 'center'}}>
-                            <SvgUri
-                                width="10"
-                                height="12"
-                                svgXmlData ={Images.svg.lock}
-                            />
+                            <Icon type="lock" size="small" />
+
                             <Text style={styles.container__panel___textSub}>
                                 Channel • 10,000 Members
                             </Text>
                         </View>
                     </View>
                     <View style={styles.container__panel___buttonPanel}>
-                        <View style={styles.container__panel___buttonPanel__buttonStatus}>
-                            <Text style={{
-                                color: "#3e3e3e"
-                            }}>
-                                Joined
-                            </Text>
-                        </View>
-                        <View style={styles.container__panel___buttonPanel__buttonMenu}>
-                            <View style={styles.burger_slice} />
-                            <View style={styles.burger_slice__middle} />
-                            <View style={styles.burger_slice}/>
-                        </View>
+                        <GenericBtn title="Joined" />
+                        
+                        <MenuBtn />
                     </View>
                 </View>
             </View>

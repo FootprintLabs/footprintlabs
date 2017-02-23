@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {View, Image, Text} from 'react-native';
-import SvgUri from 'react-native-svg-uri';
 
 import styles from './style';
-import Images from '../../images';
+import Avatar from '../Avatar';
+import Icon from '../Icon';
 
 
 export default class Message extends Component {
@@ -19,12 +19,7 @@ export default class Message extends Component {
 				<View style={styles.container__panel}>
 					<View style={{flex:1, flexDirection: 'row'}}>
 						<View>
-							<Image
-								source={avatar}
-								style={{
-									width: 35, 
-									height: 35}}
-							/>
+							<Avatar src={avatar} />
 						</View>
 						<Text style={{paddingLeft: 20,flex: 1, color: '#000', fontSize: 17, fontWeight: '400'}}>
 							{username}
@@ -38,13 +33,7 @@ export default class Message extends Component {
 							</Text>
 						</View>
 						<View style={{paddingLeft: 10}}>
-							<SvgUri
-								width="18"
-								height="17"
-								svgXmlData ={Images.svg.reply}
-								style={{
-								}}
-							/>
+							<Icon type="reply" size="medium" />
 						</View>
 					</View>
 				</View>
@@ -59,13 +48,8 @@ export default class Message extends Component {
 				</View>
 
 				<View style={{marginTop: 35, paddingHorizontal: 20, marginBottom: 13, flex: 1, flexDirection: 'row'}}>
-					<SvgUri
-						width="18"
-						height="17"
-						svgXmlData ={Images.svg.reply}
-						style={{
-						}}
-					/>
+					<Icon type="reply" size="medium" />
+
 					<Text 
 						style={{
 							color: 'rgb(0, 127, 224)',

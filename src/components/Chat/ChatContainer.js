@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text} from 'react-native';
 
-import ChatInput from '../ChatInput';
+import Input from '../Input';
 import ChatFeed from '../ChatFeed';
 import styles from './style';
 import ChatApi from '../../api/ChatApi';
@@ -43,7 +43,7 @@ export default class ChatContainer extends Component {
         return (
             <View style={styles.container}>
                 <ChatFeed messages={messages}/>
-                <ChatInput addMessage={this.addMessage} user={user}/>
+                <Input addMessage={this.addMessage} user={user}/>
             </View>
         )
     }

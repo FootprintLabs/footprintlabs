@@ -15,7 +15,7 @@ export default class TopPanel extends Component {
                         <SvgUri
                             width="22"
                             height="22"
-                            svgXmlData ={Images.svg.logo}
+                            svgXmlData={Images.svg.logo}
                         />
                     </View>
                     
